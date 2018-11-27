@@ -1,6 +1,8 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox>
+    <button mat-icon-button (click)="toggleNav()">
+      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+    </button>
     <span class="example-spacer"></span>
   </mat-toolbar-row>
 </mat-toolbar>

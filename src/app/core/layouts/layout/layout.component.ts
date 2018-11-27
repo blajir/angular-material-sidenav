@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
   opened: boolean;
 
-  constructor() { }
+  constructor() {
+    this.opened = false;
+  }
 
   ngOnInit() {
+  }
+
+  toggleNav() {
+    this.opened = !this.opened;
   }
 
 }
