@@ -1,0 +1,18 @@
+.example-container {
+  height: calc(100% - 64px);
+  /* width: 400px;
+  margin: 10px; */
+  border: 1px solid #555;
+}
+
+.example-container__sidebar {
+  border-right: 1px solid #000;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
