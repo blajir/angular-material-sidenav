@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+
+import * as CoreReducers from './../../state/core.reducer';
+import * as CoreActions from './../../state/core.actions';
+import { getShowSideNavi } from '../../../state/index';
 
 @Component({
   selector: 'app-layout',
@@ -6,17 +12,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
-  opened: boolean;
+  opened$: Observable<boolean>;
 
-  constructor() {
-    this.opened = false;
+  constructor(
+    private store: Store<CoreReducers.State>
+  ) {
+    this.opened$ = this.store.select(getShowSideNavi);
   }
 
   ngOnInit() {
   }
 
-  toggleNav() {
-    this.opened = !this.opened;
+  openSideNav() {
+    this.store.dispatch(
+      new CoreActions.OpenSideNav()
+    );
   }
 
+  closeSideNav() {
+    this.store.dispatch(
+      new CoreActions.CloseSideNav()
+    );
+  }
 }

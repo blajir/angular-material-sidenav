@@ -1,11 +1,20 @@
 import { Action } from '@ngrx/store';
 
 export enum CoreActionTypes {
-  LoadCores = '[Core] Load Cores'
+  OpenSideNav = '[Core] Open Side Navigation',
+  CloseSideNav = '[Core] Close Side Navigation',
 }
 
-export class LoadCores implements Action {
-  readonly type = CoreActionTypes.LoadCores;
+export class OpenSideNav implements Action {
+  readonly type = CoreActionTypes.OpenSideNav;
+  public constructor() {}
 }
 
-export type CoreActions = LoadCores;
+export class CloseSideNav implements Action {
+  readonly type = CoreActionTypes.CloseSideNav;
+  public constructor() {}
+}
+
+export type CoreActions =
+  | OpenSideNav
+  | CloseSideNav;
