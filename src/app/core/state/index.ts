@@ -6,7 +6,7 @@ import {
   MetaReducer
 } from '@ngrx/store';
 import { environment } from '../../../environments/environment';
-import * as fromCore from './core.reducer';
+import * as fromCore from './layout.reducer';
 
 export interface State {
 

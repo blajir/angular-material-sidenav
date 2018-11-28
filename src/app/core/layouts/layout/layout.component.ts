@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 
-import * as CoreReducers from './../../state/core.reducer';
-import * as CoreActions from './../../state/core.actions';
+import * as CoreReducers from '../../state/layout.reducer';
+import * as CoreActions from '../../state/layout.actions';
 import { getShowSideNavi } from '../../../state/index';
 
 @Component({

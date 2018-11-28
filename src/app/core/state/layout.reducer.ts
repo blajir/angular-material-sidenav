@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { CoreActions, CoreActionTypes } from './core.actions';
+import { CoreActions, CoreActionTypes } from './layout.actions';
 
 export interface State {
   isShowSideNav: boolean;
