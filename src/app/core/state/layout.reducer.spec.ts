@@ -1,4 +1,4 @@
-import { reducer, initialState } from './core.reducer';
+import { reducer, initialState } from './layout.reducer';
 
 describe('Core Reducer', () => {
   describe('unknown action', () => {
