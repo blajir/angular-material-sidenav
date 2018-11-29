@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 
 import * as CoreReducers from '../../state/layout.reducer';
 import * as CoreActions from '../../state/layout.actions';
@@ -17,7 +17,7 @@ export class LayoutComponent implements OnInit {
   constructor(
     private store: Store<CoreReducers.State>
   ) {
-    this.opened$ = this.store.select(getShowSideNavi);
+    this.opened$ = this.store.pipe(select(getShowSideNavi));
   }
 
   ngOnInit() {
