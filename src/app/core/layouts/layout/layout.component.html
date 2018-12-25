@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <button *ngIf="opened$ | async" mat-icon-button (click)="closeSideNav()">
-      <mat-icon>menu</mat-icon>
+      <mat-icon>turned_in_not</mat-icon>
     </button>
     <button *ngIf="!(opened$ | async)" mat-icon-button (click)="openSideNav()">
       <mat-icon>menu</mat-icon>
@@ -12,5 +12,8 @@
 
 <mat-drawer-container class="example-container">
   <mat-drawer class="example-container__sidebar" mode="side" [opened]="opened$ | async">Drawer content</mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
+  <mat-drawer-content>
+    Main content
+    <mat-icon svgIcon="hoge"></mat-icon>
+  </mat-drawer-content>
 </mat-drawer-container>
